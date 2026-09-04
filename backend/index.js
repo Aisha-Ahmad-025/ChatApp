@@ -8,7 +8,7 @@ import authRoute from './routes/authRoute.js'
 
 dotenv.config();
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 const app = express();
 
 //middleware
@@ -23,6 +23,6 @@ connectDB();
 // Routes
 app.use('/api/auth',authRoute)
 
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server is running on port ${process.env.PORT}`)
 });
